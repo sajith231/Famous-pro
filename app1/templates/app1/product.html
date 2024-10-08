@@ -1,0 +1,150 @@
+{% extends 'app1/base.html' %}
+
+{% block content %}
+    <style>
+        /* Styles for the product section */
+        .product-section {
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+
+        .product-section h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-title {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #007BFF;
+        }
+
+        .product-description {
+            font-size: 1em;
+            color: #666;
+        }
+    </style>
+
+    <section class="product-section">
+        <h1>Our Delicious Products</h1>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJxo2NFiYcR35GzCk5T3nxA7rGlSsXvIfJwg&s" alt="Fresh Salad" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-title">Fresh Garden Salad</h2>
+                    <p class="product-description">A crisp and refreshing mix of seasonal vegetables, perfect for a light lunch or side dish.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPtXUOASyY6iTnWSI3wmeIyrAtct_j-Olv3w&s" alt="Artisan Pizza" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-title">Artisan Margherita Pizza</h2>
+                    <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, quasi. Minus, placeat dicta voluptate consectetur dolores atque ipsum veritatis rem minima omnis dignissimos nulla cupiditate deserunt totam, reprehenderit eaque numquam?t.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://e0.pxfuel.com/wallpapers/16/621/desktop-wallpaper-best-in-high-quality-google.jpg" alt="Grilled Salmon" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-title">Grilled Atlantic Salmon</h2>
+                    <p class="product-description">Tender, flaky salmon fillet grilled to perfection and served with a lemon butter sauce.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://e0.pxfuel.com/wallpapers/16/621/desktop-wallpaper-best-in-high-quality-google.jpg" alt="Grilled Salmon" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-title">Grilled Atlantic Salmon</h2>
+                    <p class="product-description">Tender, flaky salmon fillet grilled to perfection and served with a lemon butter sauce.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://e0.pxfuel.com/wallpapers/16/621/desktop-wallpaper-best-in-high-quality-google.jpg" alt="Grilled Salmon" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-title">Grilled Atlantic Salmon</h2>
+                    <p class="product-description">Tender, flaky salmon fillet grilled to perfection and served with a lemon butter sauce.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://e0.pxfuel.com/wallpapers/16/621/desktop-wallpaper-best-in-high-quality-google.jpg" alt="Grilled Salmon" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-title">Grilled Atlantic Salmon</h2>
+                    <p class="product-description">Tender, flaky salmon fillet grilled to perfection and served with a lemon butter sauce.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://e0.pxfuel.com/wallpapers/16/621/desktop-wallpaper-best-in-high-quality-google.jpg" alt="Grilled Salmon" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-title">Grilled Atlantic Salmon</h2>
+                    <p class="product-description">Tender, flaky salmon fillet grilled to perfection and served with a lemon butter sauce.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://e0.pxfuel.com/wallpapers/16/621/desktop-wallpaper-best-in-high-quality-google.jpg" alt="Grilled Salmon" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-title">Grilled Atlantic Salmon</h2>
+                    <p class="product-description">Tender, flaky salmon fillet grilled to perfection and served with a lemon butter sauce.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://e0.pxfuel.com/wallpapers/16/621/desktop-wallpaper-best-in-high-quality-google.jpg" alt="Grilled Salmon" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-title">Grilled Atlantic Salmon</h2>
+                    <p class="product-description">Tender, flaky salmon fillet grilled to perfection and served with a lemon butter sauce.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://e0.pxfuel.com/wallpapers/16/621/desktop-wallpaper-best-in-high-quality-google.jpg" alt="Grilled Salmon" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-title">Grilled Atlantic Salmon</h2>
+                    <p class="product-description">Tender, flaky salmon fillet grilled to perfection and served with a lemon butter sauce.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://e0.pxfuel.com/wallpapers/16/621/desktop-wallpaper-best-in-high-quality-google.jpg" alt="Grilled Salmon" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-title">Grilled Atlantic Salmon</h2>
+                    <p class="product-description">Tender, flaky salmon fillet grilled to perfection and served with a lemon butter sauce.</p>
+                </div>
+            </div><div class="product-card">
+                <img src="https://e0.pxfuel.com/wallpapers/16/621/desktop-wallpaper-best-in-high-quality-google.jpg" alt="Grilled Salmon" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-title">Grilled Atlantic Salmon</h2>
+                    <p class="product-description">Tender, flaky salmon fillet grilled to perfection and served with a lemon butter sauce.</p>
+                </div>
+            </div>
+            <!-- Add more product cards as needed -->
+        </div>
+    </section>
+{% endblock %}
+
