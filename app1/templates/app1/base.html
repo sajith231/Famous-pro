@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Navbar Styles */
+        @font-face{
+            font-family: "Nexa";
+            src: url("../../../static/font/nexa/Nexa-Heavy.ttf");
+        }
         .navbar {
             display: flex;
             justify-content: flex-end;
@@ -44,7 +48,7 @@
         /* Banner Carousel Styles */
         .banner-carousel {
             width: 100%;
-            height: 600px; /* Default height for larger screens */
+            height: 600px;
             overflow: hidden;
             position: relative;
         }
@@ -57,7 +61,7 @@
         .banner-carousel-image {
             min-width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures images cover the area without distortion */
+            object-fit: cover;
         }
 
         /* Navigation Buttons */
@@ -93,6 +97,8 @@
             color: #007bff;
             margin-bottom: 15px;
             font-weight: bold;
+            font-weight: 700;
+            font-size: larger;
         }
 
         .footer p {
@@ -130,6 +136,9 @@
         .social-icons a:hover {
             color: #007bff;
         }
+        .NavbarFont{
+            font-family: 'Nexa';
+        }
 
         @media (max-width: 1200px) {
             .banner-carousel {
@@ -164,32 +173,76 @@
     <header style="padding: 10px 20px;">
         <div style="display: flex; justify-content: space-between; align-items: center;">
             <div style="height: 100px;">
-                <img src="https://res.cloudinary.com/dwpgriiod/image/upload/v1728119529/famous_food_producers_zkfxs5.png" alt="Shop Logo" style="height: 100%; width:100%; object-fit: contain;">
+                <img src="{% static 'media/logo.png' %}" alt="Shop Logo" style="height: 100%; width:100%; object-fit: contain;">
             </div>
             <div style="display: flex; align-items: center; gap: 50px;">
                 <div style="display: flex; gap: 20px;">
-                    <h4><a href="{% url 'index' %}">Home</a></h4>
-                    <h4><a href="{% url 'product' %}">Product</a></h4>
-                    <h4><a href="{% url 'contact' %}">Contact</a></h4>
+                    <h4><a href="{% url 'index' %}" style="font-weight: 700;" class="NavbarFont">Home</a></h4>
+                    <h4><a href="{% url 'product' %}" style="font-weight: 700;" class="NavbarFont">Product</a></h4>
+                    <h4><a href="{% url 'contact' %}" style="font-weight: 700;" class="NavbarFont">Contact</a></h4>
                 </div>
-                <div>
-                    <div><i class="fas fa-envelope"></i> famous@gmail.com</div>
-                    <div><i class="fas fa-phone"></i> +91 9061947005</div>
+                <div style="padding: 20px;background-color: #007bff;color: #fff;border-radius: 20px;">
+                    <div style="margin-bottom: 5px;" class="NavbarFont"><i class="fas fa-envelope"></i> famous@gmail.com</div>
+                    <div class="NavbarFont"><i class="fas fa-phone"></i> +91 9061947005</div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Banner Carousel -->
+    <!-- Infinite Banner Carousel -->
     <div class="banner-carousel">
         <div class="banner-carousel-images">
-            <img src="https://t4.ftcdn.net/jpg/06/41/42/69/360_F_641426931_sJkCqdIkiI5GPtbBQ92S7xIJk9akRo33.jpg" alt="Banner 1" class="banner-carousel-image">
-            <img src="https://e0.pxfuel.com/wallpapers/16/621/desktop-wallpaper-best-in-high-quality-google.jpg" alt="Banner 2" class="banner-carousel-image">
-            <img src="https://e0.pxfuel.com/wallpapers/16/621/desktop-wallpaper-best-in-high-quality-google.jpg" alt="Banner 3" class="banner-carousel-image">
+            
+            <img src="{% static 'media/banner.jpg' %}" alt="Banner 1" class="banner-carousel-image" style="height: 100%;width: 100%;">
+            <img src="{% static 'media/banner.jpg' %}" alt="Banner 1" class="banner-carousel-image" style="height: 100%;width: 100%;">
+            <img src="{% static 'media/banner.jpg' %}" alt="Banner 1" class="banner-carousel-image" style="height: 100%;width: 100%;">
+            <img src="{% static 'media/banner.jpg' %}" alt="Banner 1" class="banner-carousel-image" style="height: 100%;width: 100%;">
+            <img src="{% static 'media/banner.jpg' %}" alt="Banner 1" class="banner-carousel-image" style="height: 100%;width: 100%;">
+            <img src="{% static 'media/banner.jpg' %}" alt="Banner 1" class="banner-carousel-image" style="height: 100%;width: 100%;">
+            
+            
         </div>
         <button class="nav-button prev" onclick="prevSlide()">❮</button>
         <button class="nav-button next" onclick="nextSlide()">❯</button>
     </div>
+
+    {% block content %} {% endblock %}
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h5 class="footer-title">About Us</h5>
+                    <p>Famous Food Products offers high-quality, delicious food made with care and sustainability in mind. We aim to bring people together through wholesome, flavorful recipes. Join us in celebrating the joy of great food.</p>
+                </div>
+                <div class="col-sm-3">
+                    <h5 class="footer-title">Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5 class="footer-title">Contact Us</h5>
+                    <ul class="footer-contact-info">
+                        <li><i class="fas fa-phone"></i> +91 9061947005</li>
+                        <li><i class="fas fa-envelope"></i> famous@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Kalpetta, Wayanad, Kerala</li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 social-icons">
+                    <h5 class="footer-title">Follow Us</h5>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script>
         const images = document.querySelector('.banner-carousel-images');
@@ -198,10 +251,7 @@
 
         function slideToNextImage() {
             currentIndex++;
-            if (currentIndex >= totalImages) {
-                currentIndex = 0;
-            }
-            images.style.transform = `translateX(-${currentIndex * 100}%)`;
+            updateCarousel();
         }
 
         function nextSlide() {
@@ -210,58 +260,35 @@
 
         function prevSlide() {
             currentIndex--;
-            if (currentIndex < 0) {
-                currentIndex = totalImages - 1;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            images.style.transition = 'transform 0.5s ease-in-out';
+            images.style.transform = `translateX(-${(currentIndex % totalImages) * 100}%)`;
+            
+            // If we've moved past the last image, reset without transition
+            if (currentIndex >= totalImages) {
+                setTimeout(() => {
+                    images.style.transition = 'none';
+                    images.style.transform = 'translateX(0)';
+                    currentIndex = 0;
+                }, 500);
             }
-            images.style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            // If we've moved before the first image, reset without transition
+            if (currentIndex < 0) {
+                setTimeout(() => {
+                    images.style.transition = 'none';
+                    images.style.transform = `translateX(-${(totalImages - 1) * 100}%)`;
+                    currentIndex = totalImages - 1;
+                }, 500);
+            }
         }
 
         // Change image every 3 seconds
         setInterval(slideToNextImage, 3000);
     </script>
 
-    {% block content %} {% endblock %}
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <h5 class="footer-title">About Us</h5>
-                    <p>Famous Food Products offers high-quality, delicious food made with care and sustainability in mind. We aim to bring people together through wholesome, flavorful recipes. Join us in celebrating the joy of great food.
-
-                    </p>
-                </div>
-                <div class="col-md-3">
-                    <h5 class="footer-title">Quick Links</h5>
-                    <ul class="footer-links">
-                        <li><a href="{% url 'index' %}">Home</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="{% url 'product' %}">Products</a></li>
-                        <li><a href="{% url 'contact' %}">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5 class="footer-title">Contact Info</h5>
-                    <ul class="footer-contact-info">
-                        <li>123 Main St, City, Country</li>
-                        <li>Phone: (123) 456-7890</li>
-                        <li>Email: info@example.com</li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5 class="footer-title">Follow Us</h5>
-                    <div class="social-icons">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
 </body>
 </html>

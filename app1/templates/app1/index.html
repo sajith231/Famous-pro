@@ -1,15 +1,19 @@
 {% extends 'app1/base.html' %}
-
+{% load static %}
 {% block content %}
     <!-- About Section -->
     <style>
+        @font-face {
+            font-family: "quicksandnedium";
+            src: url("../../../static/font/quicksand/Quicksand-SemiBold.ttf");
+        }
         .about-section {
             padding: 80px 0;
             background-color: #f8f9fa;
         }
         .about-content h1 {
             color: #333;
-            font-size: 2.5rem;
+            
             margin-bottom: 30px;
             position: relative;
         }
@@ -30,43 +34,43 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             overflow: hidden;
+           
             
+        }
+        .aboutParagraph{
+            font-family: "quicksandnedium";
         }
     </style>
 
+<section class="about-section"> 
+    <div class="container">
+        <div class="row align-items-center" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
+            <div class="col-lg-6 col-md-12 about-content" style="padding: 15px;">
+                <h1 style="font-weight: 700;" class="productFont">About Famous Food Products</h1>
+                <h4 style="font-size: 16px; line-height: normal;" class="aboutParagraph">At Famous Food Products, we are passionate about delivering exceptional food products that bring families together. With a rich heritage in the culinary arts, we strive to create flavors that resonate with tradition and innovation. Our mission is to provide high-quality, delicious food options that cater to diverse tastes and preferences.
 
-
-
-
-
-
-
-
-    
-    <section class="about-section"> 
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 about-content">
-                    <h1>About Famous Food Products</h1>
-                    <h4>At [Your Company Name], we are passionate about delivering exceptional food products that bring families together. With a rich heritage in the culinary arts, we strive to create flavors that resonate with tradition and innovation. Our mission is to provide high-quality, delicious food options that cater to diverse tastes and preferences.
-
-                        We carefully select the finest ingredients from trusted sources to ensure our products are both wholesome and flavorful. Each recipe is crafted with love, reflecting our commitment to quality and excellence. We believe that food should not only taste great but also nourish the body and soul.
-                        
-                        Sustainability is at the core of our values. We take pride in our eco-friendly practices, from sourcing ingredients responsibly to using sustainable packaging. Our team is dedicated to making a positive impact on our community and the environment.
-                        
-                        At [Your Company Name], we cherish the connections that food creates. We invite you to explore our wide range of products and join us on this flavorful journey. Together, let's celebrate the joy of good food and create lasting memories around the table.</h4>
-                </div>
-                <div class="col-lg-6">
-                    <div class="about-image">
-                        <img src="https://t4.ftcdn.net/jpg/06/41/42/69/360_F_641426931_sJkCqdIkiI5GPtbBQ92S7xIJk9akRo33.jpg" alt="Famous Food Products" class="img-fluid">
-                    </div>
+                    We carefully select the finest ingredients from trusted sources to ensure our products are both wholesome and flavorful. Each recipe is crafted with love, reflecting our commitment to quality and excellence. We believe that food should not only taste great but also nourish the body and soul.
+                    
+                    Sustainability is at the core of our values. We take pride in our eco-friendly practices, from sourcing ingredients responsibly to using sustainable packaging. Our team is dedicated to making a positive impact on our community and the environment.
+                    
+                    At Famous Food Products, we cherish the connections that food creates. We invite you to explore our wide range of products and join us on this flavorful journey. Together, let's celebrate the joy of good food and create lasting memories around the table.</h4>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-image">
+                    <img src="https://t4.ftcdn.net/jpg/06/41/42/69/360_F_641426931_sJkCqdIkiI5GPtbBQ92S7xIJk9akRo33.jpg" alt="Famous Food Products" class="img-fluid" style="height: 400px;">
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Product Section -->
     <style>
+        @font-face{
+            font-family: "quicksand";
+            src: url("../../../static/font/quicksand/Quicksand-Bold.ttf");
+        }
        .product-section {
             padding: 20px;
             background-color: #f8f8f8;
@@ -87,13 +91,18 @@
         }
 
         .product-card {
-            background: #fff;
+            background-color: #EFEFEF;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             max-width: 300px;
             text-align: center;
             transition: transform 0.2s;
+            height: 350px;
+            padding: 20px;
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            box-shadow: inset rgb(0 0 0 / 16%) 0px 3px 6px;;
         }
 
         .product-card:hover {
@@ -102,7 +111,8 @@
 
         .product-image {
             width: 100%;
-            height: auto;
+            height: 60%;
+            object-fit: contain;
         }
 
         .product-info {
@@ -138,37 +148,40 @@
         .view-all-button:hover {
             background-color: #0056b3;
         }
+        .productFont{
+            font-family: "quicksand";
+        }
     </style>
 
     <section class="product-section">
         
-        <h1>Our Delicious Products</h1>
+        <h1 style="font-weight: 700;" class="productFont">Our Delicious Products</h1>
         <div class="product-grid">
             <div class="product-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJxo2NFiYcR35GzCk5T3nxA7rGlSsXvIfJwg&s" alt="Fresh Salad" class="product-image">
+                <img src="{% static 'media/Product2.png' %}" alt="Artisan Pizza" class="product-image">
                 <div class="product-info">
-                    <h2 class="product-title">Fresh Garden Salad</h2>
+                    <h2 class="product-title productFont">Fresh Garden Salad</h2>
                     <p class="product-description">A crisp and refreshing mix of seasonal vegetables, perfect for a light lunch or side dish.</p>
                 </div>
             </div>
             <div class="product-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPtXUOASyY6iTnWSI3wmeIyrAtct_j-Olv3w&s" alt="Artisan Pizza" class="product-image">
+                <img src="{% static 'media/Product2.png' %}" alt="Artisan Pizza" class="product-image">
                 <div class="product-info">
-                    <h2 class="product-title">Artisan Margherita Pizza</h2>
+                    <h2 class="product-title productFont">Artisan Margherita Pizza</h2>
                     <p class="product-description">Hand-tossed pizza with fresh mozzarella, tomatoes, and basil on a thin, crispy crust.</p>
                 </div>
             </div>
             <div class="product-card">
-                <img src="https://e0.pxfuel.com/wallpapers/16/621/desktop-wallpaper-best-in-high-quality-google.jpg" alt="Grilled Salmon" class="product-image">
+                <img src="{% static 'media/Product2.png' %}" alt="Artisan Pizza" class="product-image">
                 <div class="product-info">
-                    <h2 class="product-title">Grilled Atlantic Salmon</h2>
+                    <h2 class="product-title productFont">Grilled Atlantic Salmon</h2>
                     <p class="product-description">Tender, flaky salmon fillet grilled to perfection and served with a lemon butter sauce.</p>
                 </div>
             </div>
             <div class="product-card">
-                <img src="https://e0.pxfuel.com/wallpapers/16/621/desktop-wallpaper-best-in-high-quality-google.jpg" alt="Grilled Salmon" class="product-image">
+                <img src="{% static 'media/Product2.png' %}" alt="Artisan Pizza" class="product-image">
                 <div class="product-info">
-                    <h2 class="product-title">Grilled Atlantic Salmon</h2>
+                    <h2 class="product-title productFont">Grilled Atlantic Salmon</h2>
                     <p class="product-description">Tender, flaky salmon fillet grilled to perfection and served with a lemon butter sauce.</p>
                 </div>
             </div>
@@ -253,13 +266,14 @@
     
     
     <section>
-        <div style="width: 90%;display: flex;justify-content: center;align-items: center; gap: 10px;padding: 20px;margin-left: 3%;">
-            <div style="width: 100%;height: 500px;">
-                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEBUTEhIVFRAQFxUVDxAQDxUQFQ8QFRUWFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OFxAQGy0eHR4tLS0tLS0tLSsrLS0tKy0tLS0rLS0tLS0tLS0tLS0rLSstKy0rLSstLS0tKy0tLS0tLf/AABEIAKcBLQMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAADAQIEBQYABwj/xAA+EAACAQIDBQYDBgUDBAMAAAABAgADEQQSIQUxQVFhBhMicYGRMkKhBxRSYrHBFSNy0fCCouFDU7LxM5LC/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAECAwQF/8QAIhEBAQACAgIDAQEBAQAAAAAAAAECEQMhEjETQVEEgXFh/9oADAMBAAIRAxEAPwDyGSKbSOI9DNMpUSIhjjKy4RYkWAhE4GLGmA4TogMdAVRHiIIsBsdETfFYwEBhVgY9TAMsWoY1TEY6wHVR4YCqdBDVd0BXO6SrEnBb7x1dtY3DboyodY+haYA6eUtNn43I5PDjKfA/CZLpbpUrYUaysLg3EeTMjgcc1J7fLxE01HEBwCDpM2KkoYQQCGFUyAwMcDBrHCAQRwMGDHXgEBigwd4t4BQY6CBjgYBLxQYwGOgeBCOBjBHTSjoYS8AhhllSnTp06ELEadG3gKIRIIGFQQHmNi3nGAtOcxiqNIyB0csZaPAgEUxOMSJT3yglYyPXO6GrGR653TNWD0niFtYJW0jlMKtdmtoRJSmVFGqVOkmpVB1MsZsSKwBI+stdlVcp36GUeYtoJYYZgoAhGqRxDBpnRjiAOUI+0zaYq7aFTCAzM0tpkb5ZYTaIaBaxbwaveLeAS8UNBXihoBg0cDBAx4gFBjgYMR4geCzorCIJpo9TD0zIwhqZgoxiRTElZLeIJxiEwpoOskCRlh6ZhHEx4jDHLAJwghDHdBDfA6EEHCCA0zqW+IY6lvgNqNrI9c6iPdtYGsdZKsEVoRTGJRffkax3HKdYpUjeLecijq0k02voJBUybgzY7x6m0qVPoIAIcIDBodLgqbWvYx9Frny1PQSoLT5GDzWhcx/C58qbRPurMbhHB6oRM5QDLx9GoQdI9Nm1b6026agfrGlMpG8EEgg8CNOHr7TKNNs6sSNZNzSmwOJAEsqVS8qjg3k/D7NdhfSRKdPW8tsPjHAsLe0nlGpjS09ivzEkJsM8W+kaMdU5/SOGKc/MZPJrwSKew14sYYbHp8z7yF3rHifecCeZ95PJfF88VFgpJcQDCdWIaI9TGCOgSEaLAoYcSskMaY8xhhTRDUjAiEpmARoqxDFSES6CjxEi4Rb2va5uqjXl4r+kkYfZlRxmWmmU7izuLjn8UjK4CsOLAAf/AGBP6Ta7A2fUqrSpUlLOyrYDhoLkngOsVYzP8Bqn/tqOhb+0mYPshXq3FMFyvxCnTepYHnYTebd7H18MgqXFRLfzGQH+UeNwd6/m97QnY6mx7wrTznwAAY98G1/Fuy/H67vWTa6ee4nslUpm1RmQ8noMhPoxELQ2HYf/ADNpyFv3nsS1WYmiQ/eWLHAY8rVWuo3mjX1N+pJ8hvmR7RbJSlkrUb/d698qt8VGops9Juo19jyvGzTy/aitTeqmdmUBLZjfxEqw052DaynOrAc7D3k/b1UnEVNdMwuOqiw/eVZbWKRqNkbOp1g71AW8bBfEQLDyP+Wmx7NdgqWKR3Hd00pEBmqZm3i/OUPY7BPVpU0prmeoWIA0vqdbncLDf0ntnYfZAo4Vk7zMXcl2p3UKQFGVW3kC2/TeZFZDDfZlh7gd9TN9BlwbP9c2kptvbDpYXENRXK2QLdu7VdWUNawvzE9gOEysGzeBbE95Vqsfq9h7TCduNkqS+KUsMzqjK2oqaWV04gWTcR5GB5Vtquq1WAA3ILAWvvJ/UQeCqgtaxu9lGnNhCYtA1d9Pmte3LT9pL2ZRHfIDzvy3a/tNMNhgMG9VrAhVUZndvhpoN7H+3G8tcFh1e4oYJqwXQ1q2YBj0VSFXyuTC7NwV6NCmDb75WJqNx7ukQAvuWPnaT8LSqPiGqFCtPCip91o5SAWQEKEXidxJmWlJtbB0+6WtTU0/G1KtSLFhTqKL+EnWxHA7rTzstmY9SfqSf3noG2mNHCdyxvVu9at+RiuVFP5rAkj80xGzqFzJWamYTDS5wVGBoU9wlvhqNhM5XTWGOxKaSQizkSFVZzdiqsKiTlEIogcFjwsVRHgQPnSDdYW0bUIA6z0uCPaOkymbC1rnj0ivSDb9/MQbREkhYgw4/EPaHWiPxD2g2AY0y3w+xy1jqFPzHQeg3mXWz9i013IXb8bi+vRd05Z8uOLthwZ5f+Mvgtl1qvwISPxHQe5ms2N2IJsapJ5qm71O8zR7MwINs2g4g8Zr8JVRFsALcrTzZc+V9dPZj/Ljj3e1HT7N4FKYVsMjdWXxX898qsd2Jwb6089JjuytnUeYb9jNhjaK1EIU2b5b8D16ShONekbVqeU/ivdT5Nu/eYmec9V1+PjyncY/F9g8QATTZKgHC/dt7HT6z0H7PG+61WSvTZO8VESqVuqsvylhoAbjXoIKljEa1ja/qJpMIABw1nbDmyvt5+T+bGdxf7ZNbuH+7hTWt4A+48+l7br6TxOtTZWIcEOCQysLENxBHCeyYPG5QFbVeB4iD2z2ew2LAZx4xa1SmcrFfwk8R57uE745SvJlhY89wvaAfdVWozHEYatTfCtYsRTuM6luVs2nlHbf2/RrUq1NFf8AmYgVqZYABVNMK19d5bMfWavtT2Wwhw+YZcOaK6VLeEgbg43tfnv855XVeyk8ppl55tGpmrOebt/5GRDCVBuP4wT/ALmH7TZfZ92bFa+IqC6qbUlO4sDqx/QSZZam1wxuV1G0+yzZVVAlUjLkoOVJ0OdlsDbf809Fw9KqoLVArNbw93/LqMerCwt5gyJsYrR4b1CixAtu5+UO+1VB0W5/M5P6Tn5uvxd9B1doXJR89N9MtWoRUyn+kAAD8w1mf7W56eGQOcxqVi2dWzZlRLBr8dXMuW2qrtrTQ5dB/LLH6yPtfDUq6gVSaVvDTIKoFZzb4DoSTaamcqZcOUeJpiSKl2Phckq3CxJl3sUZq1jvVSR5XtF7V9kamBZCzo+Gq6K63FmUbip3HjvPGUtTHGnldHIIGRvADexuN5nXe489mr29R2fjKZpLRquabUnL4euqlguaxZWA13gG4hMXWXVzinq1QLIVDKF82axt0AnnQ2hUqLfO3lmtf2i0KpOpJPmbxo20G18QvdsuYZmsLXudTr9LzMYbElY/H17brC/IATtj0DUqCw0Exl7PbV7Hpkrcy6prA4SjlUDlJaCcLd16McdQ5VhVWNUQiwpQIRY0RyywEEcIwR4hHzgXsIymePtGsY6ehwHUx2aBvOvAJeTNl4M1agXcu9zyXl6yAJ6L2Z2eqYVDlu1QZ2J67vpac+bPxxdv5+Lzz/4dSpWGrAKPS/l0kzBozGykD9oRcPxtJeHY8gOU8Fr6si/wWCTJa92434yNjs1IXt4ePTzkahjTfUAEdRY+RBlpRqM3yZrcN+nlHtO4iYLHI/wsPK8nFQwsyhlO8EXBHUcZn8b2ZSrd8LVNGoTcrbOmYb/Cfh9PaR02rWwziniFy3Nlb5an9JmtfjNv+J+0OyQur4Sp3VmuaRuUYXGg/D9d/CDXbn3ap3eIYKRzYXtw04jqJcJtdAoNtDu4Tzv7StpZsShAX4NSVvx036cTOmGsrpz5N4Tyr0zDbaouuZKisvEqb+h5Sy2ftMEEqxud+7f0BmP7FbHw4wSVcqvVrIGeowuVJ3hRwA1HpNaMYqAAgGmdD05S9yp1lj6YP7SMRtCiVerethSfBVLrTWm53B0VQAeAbj03TzrHbdqMpXNTXMCDlDsQD1AI9p7ztjFPUpVKSCi1GopUvXu6nMN3di17c7ieD7W7N4iixXu8yr/1EObMOdt8748k9V48+HKdz0o6qgkWvlUAC4sTbUm2trm5m72J2vTCLRod0ppZEzuHzMt9WNluL34TFmg//bb2tBsX3ZSOmWaur7Ynlj6etVPtGwwNqdKu9+VFU+rVT/4xuG7V4qsf5GAuOdfFotvREU/7p5RSp1mNgGuehnoHYjstiHqK1R2VRY5bGx+sxnlMZ1p145c73avsbidtCmWWjhgBvSkj4hwOf81mU/5pKEbWxx8OJxeSk2j0l7qlmXiCtNRp0nsT1lpUrk2WmpZjyCi5P0nz1j6mZi3EknTrrLhbnvtM/HCzrbR9re0/3yiKFNSKdG5zto1RwLXtwFr+8ytXWi3QqfpaH2e2r+n1EHlurAbmaw8hOsxkmo4ZZXK7qTspvBLHNZT+aRMMoRQOMkqCxFhc8ABeVnRlXDmpltw0mt2Fs0U1HPiYzYmwnCmpUGQfKCNT6cJd0ltOGeUvp1ww+6KiwgEasIs5upyx4jBHCVDxHrBx4MAgjowRwMqPm0COYzhGVDPQ4niOjFaKGgPE9Y2Cc2Hpf0J+n/E8nUzbdj+0iIgpVDYrojHcyk3tfgRPP/Rjcsevp6f5c5jld/ba08Pc2PpJD4G40kT+Jpobi0rNp9uqNIZV8b/gp2Y+pB0nkxxt6j6GWcxm7dLynszieHCWWzscqHLuPWeV1+1G0axPc0HVTyotUNvMi00/Zapi3pH71SKOlsrsMpqrbeV5i03cMsZtzx5cM74tDtIGji1qKf5WJ0IvoKwGo/1AX9GkraVXDvRda4Bpkaq36jlMz2h2yr4dqV/5mZSn5WVgc3paZfaeKq1QQMzEL4rXIUbrn3knfprLUmqn7C2nmo5CbimTkJ4rfQ+0z3aWt3uIQX+NgmbgtyBc9BeT9kYCv3dkpObjRrZQfVrCXOz+x1AKGxXjqkkkK5yKDw3a+c6Y6xy248t8sPFq9lbLXB0RSpuxTUk1CD4jqcvIb9Osj43GWaxJyMfDrpmhKlbPTK3vlHh6W3eczVHaqVs1NvC43q3Hqp5Tllba74axkX/8WKjLYMOXKU2Ixt2PI7gTuH9o5Ay7vEvLiPXjGV3VhqPWFp2Gp03OgFhxI3yX/DqBIuq/8ynTDNvpEkcvi0/UQlfBYg2IpMfJrX+kv+s/412CwNAWsq+wmhwxVbWHlaeYUq2MW4FBvMva3XdJNHE4xwqLmB4m+mp4nhNb0zZK1P2jYllwJsbZ3RT1U3Nv9s8XxOKAvbU9Nw85u+0+xNr4wJSCKKFI6FqwBqNa2duWhNh1POR9l/ZViLfza1NCfwg1T+09PHlJj28HLN5dMbgKxtYAlnNgoGrE6aTXYHsRjGAGRUUcaj6+wm37K9hMPgyKhPe1xuqMLBP6V4ec1qiMuS/TM4/15/s37PANa1Ut+VBYe5mr2fsGjRHgpgW+Yi5PqZbFwN5A8zaQdqbQVUNjcnlrOd3fbcknpTbWr3bKNwkVILNc3O8wqyNCLCAwQMcGlQS8cILNHBoBQY8GBDRwaVBwY4GCDRwaB8/rsnEHdRf1GX9YRdgYg70t5n+09uOyx/6AgX2MOX1k+bL8X4sf144vZurxIHuYZOzB4v7Af3nqr7CvuUe0E2wm4D6R8uS/Hi86w/ZcH5mP+eUsqXYtSPiPrNkNjOPlh02fU5TN5MlmGDI0exoHzC3IgGWuE2G9Pc9vIW/SXn8PfkYo2a/I+8xcsr7dJMYjUqFUfMT5n/mHYNYhiLHraGGzW6j1iNs/mZPFry/FTWwGGy2YLcfMD4vU8YzDYrD4dSEvrqxAuWPUydWwS/4JDqYBTwJ9JZpLah4ntInBWMq6+3nb4afuZdjZI/7Z9o/+GW+QADeTNzx/GLtm6G064bdod4G+3STFwNKprqG57iDJL4mmN1z/AEp/eRa2IB3I3mWAt9IuFvqaaw5fHq9xAr7SaixRzcfKw4+YlZU2vUDEqdORtrJlXZGc3ZmN+oH7Ry7ATit/MkzePH+s5c34gDbjg3y68w2X9pe4HtjWtlVHY8LLnjaGx0XcoH+kSzwuHy7jY7jbTT0mrxSszmySsNt7Gmx+6sU45x3ZPvYTWYHa1JaYeoBTP4M6Ob87qTMWNnIWzG5PU3/WFxL1LWyhk/Lv9pm8UjXy3Katayv21wi7i7HktM//AKtK3E/aHTHwUHPLMyp+l5jNoKM+619bbvORHNp1xwx082WWUumvqfaBXIOSki/1Fn/tKzFdr8Y//UVb/gpru/1AyiC6ecKAAZvxkYuVqzXaWIqGxrPrvs2X6LaX2Gp2AvqeJOplNsXD38Z3cOsvFacuTL6dOPH7GUwqtI4aOzTk6pGaLmkbPFzyiSGih5GFSKKkIlB44NIgqR4qQJgaPDSGtSPDwL0IOUXLHACOuP8ADIbDyxcgj846Tu9/y0dKZ3fSOFLpO73/AC87vpNw1S915TjS6+0Tvf8ALTs55GNxdU00B1jDhl5fWEuf8MUDr9JNrpGOGXkPaDbDybk8/oJ2Uf8AsybXSoxCZR8JMqcTj21Hd2vcbjNdl/wCDrYEPvW/nJ2u482rgLvXTmN4851NEbVSD5TaYzswD8Fl89ZnMf2bqKbk2I3Mg1nSclnti4T6QRR6RwpxClRN5zjyyn+xipXU6bjyYWnXHOVzuNhQJymOWoUYMUVwPlN8p87G8iV9p40Nek1FEG9aWHSmx6ZiCfrOjCyo4ao/wU2b+lS36SQ2BdReoUpgbzVrU6dvRmvMg+16++vXq1XsQtGoHsOth4f1g1xWKZW8AVWuXZaSU7g78zKASJRqMVVwgH83E0iPyLUrEeqrb6ylxWIwG9VxdQX07qmlNSf6iWI9RKZMQUNxUQH8qBr/AEi1qmYXD1Kl/iC/DbiMrEkekRMtLiri6aqCmERDyxmKYsRzCpk0nYDa1Z2AQ4Smb/DTwwqN1sXBv7ypyXUkUbKTpnclF5+FrW95c7DoFEzMFtrky2I14jlGV1Ex7ul9UrsbBnLW4nT6DdEDyGKkcKk8tu3p0md5F7yQu9id9Am95FFSQDWid/KLDvIoqSv76d38IsRVjhVlb384V4FqK0eK0qhWj+/hGuGIhUc8ob7uBuEcKXWctV03AheLaFCCOyDlLpNggR4hFXpH2MujYQUxwpGEt1jgBGjYYpdfYR4pDrHCOBg2aEHKPA6D2nZp2aEOuYsZmnAwH2iNTB3idrOtKK7GbHpvwsekz+0ezxA08Q5WmxtEa0ml28yrYR6Z0JH5WFxAGuPnS35hqJ6TisJTfeBKDaGwhqU9jLMrEuMrKvQDA2IZTvEhfwzKSRcG1greNR6GWOOwDIfhIPNdJFOJqAWIB67jOuPL+ud4r9KptnVLm6oBqS6gfpHMgC5mrqGA8Ipi1+hU6S0p4pSBfRtxG6Sl2QKlzlF/xAaidplHKysxgFV3UBKlvma+UHqRLurUA0UWUbgIXFItBMoJLHmdZUmtOXJd9OvHjrtO72ca8rmrwbYic9OiyOIifeJVHEjnC01dvhRj/phE77xE7+No7Jrt8tvMyxodm3PxPbyEeWK+NQe/i99L7D9m6Y+K58zb9JY4fZNJdyD2vM+cXwrLUszfCpPkCZNo7NrNuS39RtNZTw4G4ewtDrR6fWTzp4MzS2DUPxOB5ayZT7PLbV2v6D9pfrh+kKMOY3V8YlZZwAnTpWSzrzp0DrxLzp0g68UTp0BY6dOl0OuJ2cRZ0gTvJ3eRZ0LoneRpqdZ06RdG54l506B2aJEnQplXBhxqBKbG9l1bUGx6Tp0umfKqLFdlmHX1AjKNCvQByHTkxBnTpN2LqX2qMbgsRUbMQCT+YCDpdn8Q34V9bzp0lzqzGJtHskT8dT0UWk2j2UojeM39RnTpnyrXjFjQ2JTXcij0EnU8BblEnQt6SEwfWFXCCLOmtRndEGGEKtATp0umdiLSEMlGdOmpGbRloQgoxJ03pjdf/9k=" alt="Contact Us Image" class="" style="width: 100%;height: 100%;object-fit: cover;">
-            </div>
+        <div style="display: flex;justify-content: center;align-items: center; gap: 10px;padding: 20px;width: 100%;height: 650px;">
+            
+                <div style="width: 50%;height: 100%;">
+                    <img src="https://img.freepik.com/premium-photo/customer-service-representative-professional-customer-support-aftersales-service-phone_71956-31509.jpg?size=626&ext=jpg&ga=GA1.1.1630694325.1728393201&semt=ais_hybrid" alt="Contact Us Image" class="" style="width: 100%;height:100%;object-fit: cover;">
+                </div>
     
-            <div class="contact-form" style="width: 100%; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-                <h1 style="font-size: 2em; margin-bottom: 20px;">Contact Us</h1>
+            <div class="contact-form" style="width: 100%; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);width: 50%;">
+                <h1 style="font-weight: 700;">Contact Us</h1>
     
                 <p style="margin-bottom: 20px;">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dolor quam
