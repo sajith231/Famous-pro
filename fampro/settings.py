@@ -15,7 +15,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'sajiththomas231@gmail.com'  # Your Gmail address
-EMAIL_HOST_PASSWORD = 'vuijgsiliugfcqvc'  # Your Gmail app password
+EMAIL_HOST_PASSWORD = 'vuijgsiliugfcqvc'  # Your Gmail app password:             
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -102,6 +102,7 @@ DATABASES = {
         'PASSWORD':'',
     }
 }
+
 
 
 # Password validation
