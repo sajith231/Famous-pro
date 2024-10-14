@@ -30,7 +30,7 @@ def index(request):
     return render(request, 'app1/index.html', {'form': form})
     
 
-
+# product page is the main div of  the whole sector
 
 def contact(request):
     if request.method == 'POST':
