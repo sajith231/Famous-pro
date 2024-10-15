@@ -92,7 +92,7 @@
                         </a>
                     </div>
                     
-                    <div><a href="tel:+919061947005" style="color: white; text-decoration: none;"><i class="fas fa-phone"></i> +91 9061947005</a></div>
+                    <div><a href="tel:+919061947005" style="color: white; text-decoration: none;"><i class="fas fa-phone"></i>+91 6282935003</a></div>
 
                 </div>
             </div>
@@ -225,9 +225,9 @@
             <div class="col-sm-3">
                 <h5 class="footer-title">Links</h5>
                 <ul class="footer-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'product' %}">Products</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
                 </ul>
             </div>
             <div class="col-sm-3">
@@ -240,7 +240,7 @@
             </div>
             <div class="col-sm-3 social-icons">
                 <h5 class="footer-title">Follow Us</h5>
-                <a href="https://instagram.com/sajith_thomazzzz/profilecard/?igsh=enV2NG9qN3A0MWo%3Dsh%3DMW5qMXA3eG1zZ25udg%3D%3D"><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-facebook"></i></a>
                 <a href=""><i class="fab fa-twitter"></i></a>
                 <a href=""><i class="fab fa-instagram"></i></a>
                 <a href=""><i class="fab fa-linkedin"></i></a>
@@ -253,7 +253,7 @@
     @Developed and Designed by IMC Business Solutions
 </div> -->
 <div class="footer-note" style="text-align: center; padding: 10px; background-color: #f8f9fa;">
-    @Developed and Designed by IMC Business Solutions
+    @Developed and Designed by <span style="font-weight: 600;">IMC Business Solutions</span>
 </div>
 
 
@@ -282,7 +282,7 @@
         document.querySelector('.banner-carousel-control.right').addEventListener('click', showNextImage);
         document.querySelector('.banner-carousel-control.left').addEventListener('click', showPrevImage);
 
-        // Automatic slide every 3 seconds
+        // Automatically slide every 3 seconds 
         setInterval(showNextImage, 3000);
     </script>
     

@@ -1,4 +1,3 @@
-
 {% extends 'app1/base.html' %}
 {% load static %}
 {% block content %}
@@ -55,7 +54,8 @@
         .product-info {
             padding: 15px;
         }
-        .productFont{
+
+        .productFont {
             font-family: "quicksand";
         }
 
@@ -68,7 +68,8 @@
         .product-description {
             font-size: 1em;
             color: #666;
-            
+            max-height: 100px; /* Restrict height */
+            overflow-y: auto;  /* Add scrolling if content exceeds the limit */
         }
     </style>
 
@@ -85,33 +86,25 @@
             <div class="product-card">
                 <img src="{% static 'media/Product2.png' %}" alt="Artisan Pizza" class="product-image">
                 <div class="product-info">
-                    <h2 class="product-title productFont">Artisan Margherita Pizza</h2>
-                    <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, quasi. Minus, placeat dicta voluptate consectetur dolores atque ipsum veritatis rem minima omnis dignissimos nulla cupiditate deserunt totam, reprehenderit eaque numquam?t.</p>
+                    <h2 class="product-title productFont">Coconut Oil</h2>
+                    <p class="product-description">Famous coconut oil is 100% pure and edible 
+                        natural oil. Contains trans fatty acids not 
+                        more than 0% by weight, and saturated 
+                        fatty acids not more than 91% b weight. 
+                        Coconut oil solidifies below 25 0
+                        C/77 F. 
+                        At around 30 0
+                        C/86 F, it melts and becomes 
+                        liquid again. Due to various climatic conditions prevailing over a period of time, 
+                        wax like granules could be seen in it. It is a 
+                        natural occurrence. The granules becomes 
+                        liquid again when heated above 40 0
+                        C/104 0
+                        F</p>
                 </div>
             </div>
-            <div class="product-card ">
+            <div class="product-card">
                 <img src="{% static 'media/Product.png' %}" alt="Fresh Salad" class="product-image">
-                <div class="product-info">
-                    <h2 class="product-title productFont" >Grilled Atlantic Salmon</h2>
-                    <p class="product-description">Tender, flaky salmon fillet grilled to perfection and served with a lemon butter sauce.</p>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="{% static 'media/Product2.png' %}" alt="Artisan Pizza" class="product-image">
-                <div class="product-info">
-                    <h2 class="product-title productFont">Grilled Atlantic Salmon</h2>
-                    <p class="product-description">Tender, flaky salmon fillet grilled to perfection and served with a lemon butter sauce.</p>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="{% static 'media/Product.png' %}" alt="Fresh Salad" class="product-image">
-                <div class="product-info">
-                    <h2 class="product-title productFont">Grilled Atlantic Salmon</h2>
-                    <p class="product-description">Tender, flaky salmon fillet grilled to perfection and served with a lemon butter sauce.</p>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="{% static 'media/Product2.png' %}" alt="Artisan Pizza" class="product-image">
                 <div class="product-info">
                     <h2 class="product-title productFont">Grilled Atlantic Salmon</h2>
                     <p class="product-description">Tender, flaky salmon fillet grilled to perfection and served with a lemon butter sauce.</p>
@@ -125,7 +118,7 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="{% static 'media/Product2.png' %}" alt="Artisan Pizza" class="product-image">
+                <img src="{% static 'media/Product.png' %}" alt="Fresh Salad" class="product-image">
                 <div class="product-info">
                     <h2 class="product-title productFont">Grilled Atlantic Salmon</h2>
                     <p class="product-description">Tender, flaky salmon fillet grilled to perfection and served with a lemon butter sauce.</p>
@@ -139,7 +132,7 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="{% static 'media/Product2.png' %}" alt="Artisan Pizza" class="product-image">
+                <img src="{% static 'media/Product.png' %}" alt="Fresh Salad" class="product-image">
                 <div class="product-info">
                     <h2 class="product-title productFont">Grilled Atlantic Salmon</h2>
                     <p class="product-description">Tender, flaky salmon fillet grilled to perfection and served with a lemon butter sauce.</p>
@@ -151,15 +144,36 @@
                     <h2 class="product-title productFont">Grilled Atlantic Salmon</h2>
                     <p class="product-description">Tender, flaky salmon fillet grilled to perfection and served with a lemon butter sauce.</p>
                 </div>
-            </div><div class="product-card">
-                <img src="{% static 'media/Product2.png' %}" alt="Artisan Pizza" class="product-image">
+            </div>
+            <div class="product-card">
+                <img src="{% static 'media/Product.png' %}" alt="Fresh Salad" class="product-image">
                 <div class="product-info">
                     <h2 class="product-title productFont">Grilled Atlantic Salmon</h2>
                     <p class="product-description">Tender, flaky salmon fillet grilled to perfection and served with a lemon butter sauce.</p>
                 </div>
             </div>
-            <!-- Add more product cards as needed -->
+            <div class="product-card">
+                <img src="{% static 'media/Product.png' %}" alt="Fresh Salad" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-title productFont">Grilled Atlantic Salmon</h2>
+                    <p class="product-description">Tender, flaky salmon fillet grilled to perfection and served with a lemon butter sauce.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="{% static 'media/Product.png' %}" alt="Fresh Salad" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-title productFont">Grilled Atlantic Salmon</h2>
+                    <p class="product-description">Tender, flaky salmon fillet grilled to perfection and served with a lemon butter sauce.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="{% static 'media/Product.png' %}" alt="Fresh Salad" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-title productFont">Grilled Atlantic Salmon</h2>
+                    <p class="product-description">Tender, flaky salmon fillet grilled to perfection and served with a lemon butter sauce.</p>
+                </div>
+            </div>
+            <!-- Add more product cards as needed this is the -->
         </div>
     </section>
 {% endblock %}
-

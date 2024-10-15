@@ -38,6 +38,7 @@
                 max-width: 100%;
             }
         }
+        
     </style>
     
     <section class="about-section">
@@ -71,11 +72,12 @@
 
     <!-- Product Section -->
     <style>
+        /* Styles for the product section */
         @font-face{
             font-family: "quicksand";
             src: url("../../../static/font/quicksand/Quicksand-Bold.ttf");
         }
-       .product-section {
+        .product-section {
             padding: 20px;
             background-color: #f8f8f8;
         }
@@ -106,7 +108,7 @@
             padding: 20px;
             border-radius: 20px;
             backdrop-filter: blur(20px);
-            box-shadow: inset rgb(0 0 0 / 16%) 0px 3px 6px;;
+            box-shadow: inset rgb(0 0 0 / 16%) 0px 3px 6px;
         }
 
         .product-card:hover {
@@ -123,6 +125,10 @@
             padding: 15px;
         }
 
+        .productFont {
+            font-family: "quicksand";
+        }
+
         .product-title {
             font-size: 1.5em;
             margin: 10px 0;
@@ -132,7 +138,15 @@
         .product-description {
             font-size: 1em;
             color: #666;
+            max-height: 100px; /* Restrict height */
+            overflow-y: auto;  /* Add scrolling if content exceeds the limit */
         }
+
+
+
+
+
+
 
         .view-all {
             text-align: center;
@@ -151,9 +165,6 @@
 
         .view-all-button:hover {
             background-color: #0056b3;
-        }
-        .productFont{
-            font-family: "quicksand";
         }
     </style>
 
