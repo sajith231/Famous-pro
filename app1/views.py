@@ -20,7 +20,7 @@ def index(request):
                 messages.success(request, 'Your message has been sent successfully!')
             else:
                 messages.warning(request, 'Your message was saved but there was an error sending the email notification.')
-            
+                   
             return redirect('contact')
         else:
             messages.error(request, 'Please correct the errors below.')
@@ -54,11 +54,28 @@ def contact(request):
         form = ContactForm()
     
     return render(request, 'app1/contact.html', {'form': form})
+
+
     
 
 
 
 
 def product(request):
-    return render(request,'app1/product.html')
+    return render(request,'app1/product.html') 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
