@@ -95,17 +95,29 @@ WSGI_APPLICATION = 'fampro.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.',
+#         'NAME':'famouspro',
+#         'USER':'root',
+#         'PASSWORD':'',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# }
+
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME':'famouspro',
-        'USER':'root',
-        'PASSWORD':'',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME':'famous',
+        'USER':'famous_user',
+        'PASSWORD':'thainS0kPN5DMfmxaIZiIRhJ1qebauZG',
+        'HOST': 'dpg-cs799h56l47c73941ne0-a.singapore-postgres.render.com',
+        'PORT': '5432',
     }
 }
-
 
 
 # Password validation
