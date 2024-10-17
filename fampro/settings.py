@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-2oad=x^$a#h60cl&#-d-gq50r0e0h(eqcb!nnifi&ur_d#83=j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['famouspro.onrender.com','127.0.0.1','3.109.203.247']
+ALLOWED_HOSTS = ['famouspro.onrender.com','127.0.0.1','3.109.203.247','3.109.208.185']
 # ALLOWED_HOSTS = ['13.200.235.4', 'famousfoodproducts.in', 'localhost', '127.0.0.1']
 
 
