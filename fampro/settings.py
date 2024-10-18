@@ -108,14 +108,25 @@ WSGI_APPLICATION = 'fampro.wsgi.application'
 
 
 
+# DATABASES = {
+# #     'default': {
+# #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+# #         'NAME':'famous',
+# #         'USER':'famous_user',
+# #         'PASSWORD':'thainS0kPN5DMfmxaIZiIRhJ1qebauZG',
+# #         'HOST': 'dpg-cs799h56l47c73941ne0-a.singapore-postgres.render.com',
+# #         'PORT': '5432',
+# #     }
+# # }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':'famous',
-        'USER':'famous_user',
-        'PASSWORD':'thainS0kPN5DMfmxaIZiIRhJ1qebauZG',
-        'HOST': 'dpg-cs799h56l47c73941ne0-a.singapore-postgres.render.com',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'famous',       # Replace with your actual database name
+        'USER': 'postgres',            # Replace with your actual username
+        'PASSWORD': 'sajith@2003',        # Replace with your actual password
+        'HOST': 'localhost',                # Use 'localhost' if using a local PostgreSQL server
+        'PORT': '5432',                     # PostgreSQL default port
     }
 }
 
