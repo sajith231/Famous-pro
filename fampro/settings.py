@@ -29,9 +29,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-2oad=x^$a#h60cl&#-d-gq50r0e0h(eqcb!nnifi&ur_d#83=j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['famouspro.onrender.com','127.0.0.1','13.201.226.23']
+ALLOWED_HOSTS = ['famouspro.onrender.com','127.0.0.1','3.109.203.247','3.109.208.185']
 # ALLOWED_HOSTS = ['13.200.235.4', 'famousfoodproducts.in', 'localhost', '127.0.0.1']
 
 
@@ -121,12 +121,12 @@ WSGI_APPLICATION = 'fampro.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'famous',       # Replace with your actual database name
-        'USER': 'postgres',            # Replace with your actual username
-        'PASSWORD': 'sajith@2003',        # Replace with your actual password
-        'HOST': 'localhost',                # Use 'localhost' if using a local PostgreSQL server
-        'PORT': '5432',                     # PostgreSQL default port
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',  # Use the PostgreSQL engine
+        'NAME': 'famous_y09q',  # The name of your database
+        'USER': 'famous_y09q_user',  # Your database username
+        'PASSWORD': 'GZwqiG81V91LLlcIajv5gf67auMhu48C',  # Your database password
+        'HOST': 'dpg-cs92039u0jms73c41ek0-a.singapore-postgres.render.com',  # The host address of your PostgreSQL server
+        'PORT': '5432',  # Default PostgreSQL port
     }
 }
 
