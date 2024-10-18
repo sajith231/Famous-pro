@@ -29,9 +29,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-2oad=x^$a#h60cl&#-d-gq50r0e0h(eqcb!nnifi&ur_d#83=j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['famouspro.onrender.com','127.0.0.1','3.109.203.247','3.109.208.185']
+ALLOWED_HOSTS = ['famouspro.onrender.com','127.0.0.1','3.109.203.178']
 # ALLOWED_HOSTS = ['13.200.235.4', 'famousfoodproducts.in', 'localhost', '127.0.0.1']
 
 
@@ -92,32 +92,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'fampro.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.',
-#         'NAME':'famouspro',
-#         'USER':'root',
-#         'PASSWORD':'',
-#         'HOST': 'localhost',
-#         'PORT': '3306',
-#     }
-# }
-
-
-
-# DATABASES = {
-# #     'default': {
-# #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-# #         'NAME':'famous',
-# #         'USER':'famous_user',
-# #         'PASSWORD':'thainS0kPN5DMfmxaIZiIRhJ1qebauZG',
-# #         'HOST': 'dpg-cs799h56l47c73941ne0-a.singapore-postgres.render.com',
-# #         'PORT': '5432',
-# #     }
-# # }
 
 DATABASES = {
     'default': {
