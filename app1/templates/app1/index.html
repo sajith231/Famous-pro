@@ -8,14 +8,13 @@
             src: url("../../../static/font/quicksand/Quicksand-SemiBold.ttf");
         }
         .about-section {
-            padding: 80px 0;
+            padding: 40px 0;
             background-color: #f8f9fa;
         }
         .about-content h1 {
             color: #333;
             margin-bottom: 30px;
             position: relative;
-            /* Removed the border styling for the blue line */
         }
         .about-content p {
             color: #666;
@@ -31,19 +30,27 @@
             font-family: "quicksandnedium";
         }
     
-        /* For responsive behavior */
+        /* Updated mobile responsive behavior */
         @media (max-width: 768px) {
+            .about-section {
+                padding: 20px 0;
+            }
             .about-image img {
                 height: auto;
                 max-width: 100%;
             }
+            .about-content {
+                padding-top: 0 !important;
+            }
+            .row.align-items-center {
+                margin-top: 0 !important;
+            }
         }
-        
     </style>
     
     <section class="about-section">
         <div class="container">
-            <div class="row align-items-center" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
+            <div class="row align-items-center" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 0;">
                 <!-- Text Section -->
                 <div class="col-lg-6 col-md-12 about-content" style="padding: 15px;">
                     <h1 style="font-weight: 700;" class="productFont">About Famous Food Products</h1>
@@ -61,18 +68,15 @@
                 <!-- Image Section -->
                 <div class="col-lg-6 col-md-12">
                     <div class="about-image">
-                        <img src="{% static 'media/banner2.jpg' %}" alt="Famous Food Products" class="img-fluid" style="height: 400px; width: 100%; object-fit: cover ;">
+                        <img src="{% static 'media/banner2.jpg' %}" alt="Famous Food Products" class="img-fluid" style="height: 400px; width: 100%; object-fit: cover;">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-
 
     <!-- Product Section -->
     <style>
-        /* Styles for the product section */
         @font-face{
             font-family: "quicksand";
             src: url("../../../static/font/quicksand/Quicksand-Bold.ttf");
@@ -104,7 +108,7 @@
             max-width: 350px;
             text-align: center;
             transition: transform 0.2s;
-            height: 400px;
+            height: 400px;       
             padding: 20px;
             border-radius: 20px;
             backdrop-filter: blur(20px);
@@ -138,15 +142,9 @@
         .product-description {
             font-size: 1em;
             color: #666;
-            max-height: 100px; /* Restrict height */
-            overflow-y: auto;  /* Add scrolling if content exceeds the limit */
+            max-height: 100px;
+            overflow-y: auto;
         }
-
-
-
-
-
-
 
         .view-all {
             text-align: center;
@@ -169,7 +167,6 @@
     </style>
 
     <section class="product-section">
-        
         <h1 style="font-weight: 700;" class="productFont">Our Delicious Products</h1>
         <div class="product-grid">
             <div class="product-card">
@@ -181,7 +178,6 @@
             </div>
             <div class="product-card">
                 <img src="{% static 'media/corianderproduct.png' %}" alt="Fresh Salad" class="product-image">
-                
                 <div class="product-info">
                     <h2 class="product-title productFont">Coriander Powder</h2>
                     <p class="product-description">Our coriander powder brings warm, nutty flavor and citrus notes, enhancing both savory and sweet dishes..</p>
@@ -189,14 +185,12 @@
             </div>
             <div class="product-card">
                 <img src="{% static 'media/chillyproduct.png' %}" alt="Fresh Salad" class="product-image">
-                
                 <div class="product-info">
                     <h2 class="product-title productFont">Chilly Powder</h2>
                     <p class="product-description"> Our chilli powder, made from sun-dried red chillies, adds bold flavor, fiery heat, and rich color to elevate any dish.</p>
                 </div>
             </div>
             <div class="product-card">
-                
                 <img src="{% static 'media/coconutproduct.png' %}" alt="Fresh Salad" class="product-image">
                 <div class="product-info">
                     <h2 class="product-title productFont">Cocunut Oil</h2>
@@ -209,83 +203,77 @@
         </div>
     </section>
 
-    <!-- Contact Us -->
-    <section>
-        <style>
-            .contact-section {
-                padding: 40px 0;
-                background-color: #fff;
-            }
-    
-            .contact-container {
-                max-width: 800px;
-                display: flex;  /* Use flexbox for layout */
-                align-items: flex-start;  /* Align items to the start */
-                background: #f8f8f8;
-                border-radius: 8px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                margin: 0 auto;
-                padding: 30px;
-            }
-    
-            .contact-image {
-                width: 50%;  /* Set image width */
-                height: 600px;
-                max-width: 400px;
-                border-radius: 8px;
-                margin-right: 20px;  /* Add space between image and form */
-                object-fit: cover;
-            }
-    
-    
-            .contact-form {
-                display: flex;
-                flex-direction: column;
-                  /* Set form width */
-            }
-    
-            .contact-container h1 {
-                margin-bottom: 20px;
-                font-size: 2.5em;
-                color: #333;
-            }
-    
-            .contact-container p {
-                margin-bottom: 20px;
-                color: #666;
-                line-height: 1.6;
-            }
-    
-            .form-input, .form-textarea {
-                padding: 10px;
-                margin: 10px 0;
-                border: 1px solid #ddd;
-                border-radius: 5px;
-                font-size: 1em;
-                width: 100%;
-            }
-    
-            .form-button {
-                padding: 10px;
-                background-color: #007BFF;
-                color: white;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                font-size: 1em;
-                transition: background-color 0.3s;
-            }
-    
-            .form-button:hover {
-                background-color: #0056b3;
-            }
-        </style>
-    
-    
-    
+    <!-- Contact Section -->
+    <style>
+        .contact-section {
+            padding: 40px 0;
+            background-color: #fff;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            display: flex;
+            align-items: flex-start;
+            background: #f8f8f8;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        .contact-image {
+            width: 50%;
+            height: 600px;
+            max-width: 400px;
+            border-radius: 8px;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-container h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        .contact-container p {
+            margin-bottom: 20px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .form-input, .form-textarea {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            width: 100%;
+        }
+
+        .form-button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .form-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
     <section>
         <div style="display: flex; justify-content: center; align-items: center; gap: 10px; padding: 20px; width: 100%; height: auto; flex-wrap: wrap;">
-    
             <!-- Image Section -->
             <div style="flex: 1; min-width: 300px; height: 100%; max-width: 50%;">
                 <img src="https://img.freepik.com/premium-photo/customer-service-representative-professional-customer-support-aftersales-service-phone_71956-31509.jpg?size=626&ext=jpg&ga=GA1.1.1630694325.1728393201&semt=ais_hybrid" 
@@ -298,7 +286,7 @@
                 <h1 style="font-weight: 700;">Connect With Us</h1>
         
                 <p style="margin-bottom: 20px;">
-                    At Famous Food Products, we’re here to offer you premium, wholesome food selections. Have any inquiries or feedback? Contact us, and we’ll gladly assist you!
+                    At Famous Food Products, we're here to offer you premium, wholesome food selections. Have any inquiries or feedback? Contact us, and we'll gladly assist you!
                 </p>
         
                 {% if messages %}
@@ -319,12 +307,6 @@
                     </button>
                 </form>
             </div>
-        
         </div>
-        
-      
-        
     </section>
-   
-    
 {% endblock %}

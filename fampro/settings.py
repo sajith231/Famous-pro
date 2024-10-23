@@ -36,7 +36,9 @@ ALLOWED_HOSTS = ['famouspro.onrender.com','127.0.0.1','3.109.203.247',]
 
 
 # Application definition
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://famousfoodproducts.in',
+]
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
