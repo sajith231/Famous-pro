@@ -26,7 +26,7 @@ class ContactForm(forms.ModelForm):
         widget=forms.TextInput(
             attrs={
                 'class': 'form-control',
-                'style': 'width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 4px;',
+                'style': 'width: 100%; padding: 8px; margin-bottom: 15px; border: 1px w #ddd; border-radius: 4px;',
                 'placeholder': 'Subject'
             }
         )
