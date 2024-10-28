@@ -14,8 +14,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'sajiththomas231@gmail.com'  # Your Gmail address
-EMAIL_HOST_PASSWORD = 'vuijgsiliugfcqvc'  # Your Gmail app password:             
+EMAIL_HOST_USER = 'famousfoodsproduct@gmail.com'  # Your Gmail address
+EMAIL_HOST_PASSWORD = 'uqkiomqhqxljmofz'  # Your Gmail app password:             
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-2oad=x^$a#h60cl&#-d-gq50r0e0h(eqcb!nnifi&ur_d#83=j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['famouspro.onrender.com','127.0.0.1','3.109.203.247',]
+ALLOWED_HOSTS = ['famouspro.onrender.com','127.0.0.1','3.109.203.247','famousfoodproducts.in']
 # ALLOWED_HOSTS = ['13.200.235.4', 'famousfoodproducts.in', 'localhost', '127.0.0.1']
 
 

@@ -19,7 +19,7 @@ def send_contact_email(contact_data):
             subject=subject,
             message=message,
             from_email=settings.EMAIL_HOST_USER,
-            recipient_list=['sajiththomas231@gmail.com'],
+            recipient_list=['famousfoodsproduct@gmail.com'],
             fail_silently=False,
         )
         return True
