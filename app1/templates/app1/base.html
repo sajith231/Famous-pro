@@ -19,8 +19,7 @@
         .contact-info {
             background-color: #007bff;
             color: #fff;
-            border-radius: 20px;
-            padding: 10px 15px;
+            
         }
         .banner-carousel {
             position: relative;
@@ -33,7 +32,7 @@
         .banner-carousel-image {
             width: 100%;
             flex-shrink: 0;
-        }
+        }   
         .banner-carousel-control {
             position: absolute;
             top: 50%;
@@ -66,13 +65,14 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
+        <div class="container" style="display: flex;justify-content: space-between;align-items: center;">
             <a class="navbar-brand" href="{% url 'index' %}">
-                <img src="{% static 'media/logo.png' %}" alt="Shop Logo">
+                <img src="{% static 'media/logo.png' %}" alt="Shop Logo"> <a href="{% url 'index' %}"></a>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarNav" style="margin-left: 60%;">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -85,14 +85,15 @@
                         <a class="nav-link" href="{% url 'contact' %}"><span style="color: rgb(20, 20, 151);">Contact</span></a>
                     </li>
                 </ul>
-                <div class="contact-info d-none d-lg-block">
-                    <div>
-                        <a href="mailto:famous@gmail.com" style="color: white; text-decoration: none; display: inline-flex; align-items: center;">
+                <div class=" d-none d-lg-block" >
+                    <div style="margin-left: 10%;">
+                        <a href="mailto:famous@gmail.com" style="color:black; text-decoration: none; display: inline-flex; align-items: center;" >
                             <i class="fas fa-envelope" style="margin-right: 8px;"></i>famousfoodproducts@gmail.com
-                        </a>
+                        </a>    
                     </div>
                     
-                    <div><a href="tel:+919061947005" style="color: white; text-decoration: none;"><i class="fas fa-phone"></i>+91 6282935003</a></div>
+                    <div style="margin-left: 10%;"><a href="tel:+919061947005" style="color: black; text-decoration: none;"> <i class="fab fa-whatsapp"></i>
+                        +91 6282935003</a></div>
 
                 </div>
             </div>
@@ -118,7 +119,7 @@
 
     <style>
         .footer {
-            background-color:rgb(91, 27, 165);
+            background-color:rgb(182, 62, 2);
             color: #fff;
             padding: 40px 0;
             font-family: Arial, sans-serif;
@@ -242,7 +243,7 @@
                     <li>
                        <span style="white-space: nowrap"> <i class="fas fa-envelope" ></i>famousfoodproduct@gmail.com</span>
                     </li>
-                    <li><i class="fas fa-map-marker-alt"></i>ANJUKUNNU PO,Wayanad,Kerala-670645</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Anjukunnu PO,Wayanad,Kerala-670645</li>
                 </ul>
             </div>
             <div class="col-sm-3 social-icons">
